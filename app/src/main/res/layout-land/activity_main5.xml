@@ -3,21 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity10">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/lb1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="16dp"
         android:text="You Earned: $"
         android:textColor="@color/purple_500"
-        android:textSize="28sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/score"
@@ -25,71 +24,67 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:backgroundTint="@color/white"
-        android:minWidth="48dp"
         android:text="0"
         android:textColor="@color/purple_500"
-        android:textSize="28sp"
-        app:layout_constraintLeft_toRightOf="@+id/lb1"
+        android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/lb1"
-        />
+        app:layout_constraintLeft_toRightOf="@+id/lb1" />
 
     <TextView
         android:id="@+id/question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Q10: Who discovered Penicillin?"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/lb1"
-        android:layout_marginTop="20dp"
-        android:padding="20dp"
-        />
+        android:padding="10dp"
+        android:text="Q5: Which of these planets is a gaseous planet?"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/lb1" />
 
     <RadioGroup
         android:id="@+id/radioGrp"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:choiceMode="singleChoice"
-        android:paddingLeft="70dp"
+        android:paddingLeft="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/question">
 
         <RadioButton
             android:id="@+id/ans1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Alexander Fleming"
-            android:textSize="18sp"
-            />
+            android:text="Earth"
+            android:textSize="14sp" />
 
         <RadioButton
             android:id="@+id/ans2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Louis Pasteur"
-            android:textSize="18sp"
-            />
+            android:text="Mars"
+            android:textSize="14sp" />
 
         <RadioButton
             android:id="@+id/ans3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Robert Koch"
-            android:textSize="18sp"
-            />
+            android:text="Venus"
+            android:textSize="14sp" />
 
         <RadioButton
             android:id="@+id/ans4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Alexander Graham Bell"
-            android:textSize="18sp"
-            />
+            android:text="Neptune"
+            android:textSize="14sp" />
     </RadioGroup>
 
     <Button
         android:id="@+id/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="68dp"
         android:text="Submit"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -97,6 +92,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.734"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
