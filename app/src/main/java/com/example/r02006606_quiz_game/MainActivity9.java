@@ -45,11 +45,11 @@ public class MainActivity9 extends AppCompatActivity {
             //If the choice matches correct answer
             if (choice.getText().equals("Dallol Region, Ethiopia")) {
                 //Increase score points
-                total += 2000;
+                total += 2500;
                 score.setText("" + total);
 
                 //Output correct Toast message
-                Toast msg = Toast.makeText(MainActivity9.this, "CORRECT!\nYou earned $2000", Toast.LENGTH_LONG);
+                Toast msg = Toast.makeText(MainActivity9.this, "CORRECT!\nYou earned $2500", Toast.LENGTH_LONG);
                 //setGravity used to adjust Toast location
                 msg.setGravity(Gravity.CENTER, 0, 700);
                 msg.show();

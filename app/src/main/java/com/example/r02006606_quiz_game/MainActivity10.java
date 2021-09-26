@@ -43,13 +43,13 @@ public class MainActivity10 extends AppCompatActivity {
             choice = findViewById(radioId);
 
             //If the choice matches correct answer
-            if (choice.getText().equals("Dallol Region, Ethiopia")) {
+            if (choice.getText().equals("Alexander Fleming")) {
                 //Increase score points
-                total += 2500;
+                total += 3000;
                 score.setText("" + total);
 
                 //Output correct Toast message
-                Toast msg = Toast.makeText(MainActivity10.this, "CORRECT!\nYou earned $2500", Toast.LENGTH_LONG);
+                Toast msg = Toast.makeText(MainActivity10.this, "CORRECT!\nYou earned $3000", Toast.LENGTH_LONG);
                 //setGravity used to adjust Toast location
                 msg.setGravity(Gravity.CENTER, 0, 700);
                 msg.show();

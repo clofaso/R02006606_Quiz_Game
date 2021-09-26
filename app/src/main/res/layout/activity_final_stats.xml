@@ -6,4 +6,53 @@
     android:layout_height="match_parent"
     tools:context=".FinalStats">
 
+    <TextView
+        android:id="@+id/lb1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="60dp"
+        android:text="Final Earnings: $"
+        android:textColor="@color/purple_500"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:backgroundTint="@color/white"
+        android:minWidth="48dp"
+        android:text="0"
+        android:textColor="@color/purple_500"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toRightOf="@+id/lb1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lb1"
+        />
+
+    <TextView
+        android:id="@+id/tally"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Questions Answered Successfully"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/lb1"
+        android:layout_marginTop="20dp"
+        android:padding="20dp"
+        />
+
+    <TextView
+        android:id="@+id/salutation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Questions Answered Successfully"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/lb1"
+        android:layout_marginTop="20dp"
+        android:padding="20dp"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

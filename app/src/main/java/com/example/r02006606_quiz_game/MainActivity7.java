@@ -45,11 +45,11 @@ public class MainActivity7 extends AppCompatActivity {
             //If the choice matches correct answer
             if (choice.getText().equals("-40")) {
                 //Increase score points
-                total += 1500;
+                total += 1000;
                 score.setText("" + total);
 
                 //Output correct Toast message
-                Toast msg = Toast.makeText(MainActivity7.this, "CORRECT!\nYou earned $1500", Toast.LENGTH_LONG);
+                Toast msg = Toast.makeText(MainActivity7.this, "CORRECT!\nYou earned $1000", Toast.LENGTH_LONG);
                 //setGravity used to adjust Toast location
                 msg.setGravity(Gravity.CENTER, 0, 700);
                 msg.show();
