@@ -16,7 +16,7 @@ public class MainActivity10 extends AppCompatActivity {
     TextView score;
     RadioGroup rg;
     RadioButton choice;
-    int total;
+    int total, counter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,7 @@ public class MainActivity10 extends AppCompatActivity {
         score = findViewById(R.id.score);
         score.setText("" + q10Intent.getIntExtra("SCORE", 0));
         total = Integer.parseInt(score.getText().toString());
+        counter = q10Intent.getIntExtra("TALLY", 0);
 
         //Initializing Widgets
         rg = findViewById(R.id.radioGrp);
@@ -47,6 +48,7 @@ public class MainActivity10 extends AppCompatActivity {
                 //Increase score points
                 total += 3000;
                 score.setText("" + total);
+                counter++;
 
                 //Output correct Toast message
                 Toast msg = Toast.makeText(MainActivity10.this, "CORRECT!\nYou earned $3000", Toast.LENGTH_LONG);
@@ -63,6 +65,7 @@ public class MainActivity10 extends AppCompatActivity {
             //Add score to intent for next screen
             Intent n = new Intent(this, FinalStats.class);
             n.putExtra("SCORE", total);
+            n.putExtra("TALLY", counter);
             startActivity(n);
         });
     }

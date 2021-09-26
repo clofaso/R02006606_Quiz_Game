@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup rg;
     RadioButton choice;
     int total = 0;
+    int counter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 //Increase score points
                 total += 100;
                 score.setText(""+total);
+                counter++;
 
                 //Output correct Toast message
                 Toast msg = Toast.makeText(MainActivity.this, "CORRECT!\nYou earned $100", Toast.LENGTH_LONG);
@@ -57,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
             //Add score to intent for next screen
             Intent n = new Intent(this, MainActivity2.class);
             n.putExtra("SCORE", total);
+            n.putExtra("TALLY", counter);
             startActivity(n);
         });
     }
@@ -64,5 +67,10 @@ public class MainActivity extends AppCompatActivity {
     public void selection(View view) {
         int radioId = rg.getCheckedRadioButtonId();
         choice = findViewById(radioId);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
     }
 }
