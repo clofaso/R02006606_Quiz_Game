@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity7">
 
     <TextView
         android:id="@+id/lb1"
@@ -37,7 +37,7 @@
         android:id="@+id/question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Q1: How many spaces are on a standard Monopoly board?"
+        android:text="Q7: Which of the following temperatures is the same in both Celsius and Fahrenheit?"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/lb1"
         android:layout_marginTop="20dp"
@@ -56,36 +56,32 @@
             android:id="@+id/ans1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="40"
+            android:text="-40"
             android:textSize="18sp"
-            android:onClick="selection"
             />
 
         <RadioButton
             android:id="@+id/ans2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="50"
+            android:text="-20"
             android:textSize="18sp"
-            android:onClick="selection"
             />
 
         <RadioButton
             android:id="@+id/ans3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="60"
+            android:text="0"
             android:textSize="18sp"
-            android:onClick="selection"
             />
 
         <RadioButton
             android:id="@+id/ans4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="80"
+            android:text="100"
             android:textSize="18sp"
-            android:onClick="selection"
             />
     </RadioGroup>
 

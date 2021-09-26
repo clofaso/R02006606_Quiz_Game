@@ -24,11 +24,11 @@ public class MainActivity4 extends AppCompatActivity {
         setContentView(R.layout.activity_main4);
 
         //Pulling intent information from previous activity screen
-        Intent q3Intent = getIntent();
+        Intent q4Intent = getIntent();
 
         //Updating score with previous total
         score = findViewById(R.id.score);
-        score.setText("" + q3Intent.getIntExtra("SCORE", 0));
+        score.setText("" + q4Intent.getIntExtra("SCORE", 0));
         total = Integer.parseInt(score.getText().toString());
 
         //Initializing Widgets
@@ -61,9 +61,9 @@ public class MainActivity4 extends AppCompatActivity {
             }
 
             //Add score to intent for next screen
-//            Intent n = new Intent(this, MainActivity5.class);
-//            n.putExtra("SCORE", total);
-//            startActivity(n);
+            Intent n = new Intent(this, MainActivity5.class);
+            n.putExtra("SCORE", total);
+            startActivity(n);
         });
     }
 
