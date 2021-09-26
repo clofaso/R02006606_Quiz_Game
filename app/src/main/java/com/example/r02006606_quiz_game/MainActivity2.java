@@ -4,18 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity {
 
+    TextView score;
     RadioGroup rg;
     RadioButton choice;
     int total = 0;
@@ -23,13 +22,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
+
+        //Pulling intent information from previous activity screen
+        Intent q1Intent = getIntent();
+
+        //Updating score with previous total
+        score = findViewById(R.id.score);
+        score.setText("" + q1Intent.getIntExtra("SCORE", 0));
 
         //Initializing Widgets
         rg = findViewById(R.id.radioGrp);
         TextView score = findViewById(R.id.score);
-        RadioButton ch1 = findViewById(R.id.ans1);
-        String score_txt = score.getText().toString();
 
         //Add button activity when clicked
         Button btn = findViewById(R.id.btn);
@@ -39,32 +43,32 @@ public class MainActivity extends AppCompatActivity {
             choice = findViewById(radioId);
 
             //If the choice matches correct answer
-            if(choice.getText().equals("Red")){
+            if (choice.getText().equals("77")) {
                 //Increase score points
                 total += 100;
-                score.setText(""+total);
+                score.setText("" + total);
 
                 //Output correct Toast message
-                Toast msg = Toast.makeText(MainActivity.this, "CORRECT!\nYou earned $100", Toast.LENGTH_LONG);
+                Toast msg = Toast.makeText(MainActivity2.this, "CORRECT!\nYou earned $100", Toast.LENGTH_LONG);
                 //setGravity used to adjust Toast location
                 msg.setGravity(Gravity.CENTER, 0, 700);
                 msg.show();
-            }
-            else{
-                Toast msg = Toast.makeText(MainActivity.this, "Sorry, this is incorrect", Toast.LENGTH_LONG);
+
+            } else {
+                Toast msg = Toast.makeText(MainActivity2.this, "Sorry, this is incorrect", Toast.LENGTH_LONG);
                 msg.setGravity(Gravity.CENTER, 0, 700);
                 msg.show();
             }
 
             //Add score to intent for next screen
-            Intent n = new Intent(this, MainActivity2.class);
+            Intent n = new Intent(this, MainActivity3.class);
             n.putExtra("SCORE", total);
             startActivity(n);
         });
     }
 
-    public void selection(View view) {
-        int radioId = rg.getCheckedRadioButtonId();
-        choice = findViewById(radioId);
+    @Override
+    protected void onStart() {
+        super.onStart();
     }
 }

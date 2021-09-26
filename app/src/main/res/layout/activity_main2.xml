@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity2">
 
     <TextView
         android:id="@+id/lb1"
@@ -37,7 +37,7 @@
         android:id="@+id/question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="What color is Donald Duck's bow tie?"
+        android:text="What is the average speed of a cheetah in mph?"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/lb1"
         android:layout_marginTop="20dp"
@@ -56,36 +56,32 @@
             android:id="@+id/ans1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Red"
+            android:text="89"
             android:textSize="16sp"
-            android:onClick="selection"
             />
 
         <RadioButton
             android:id="@+id/ans2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Blue"
+            android:text="68"
             android:textSize="16sp"
-            android:onClick="selection"
             />
 
         <RadioButton
             android:id="@+id/ans3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Yellow"
+            android:text="77"
             android:textSize="16sp"
-            android:onClick="selection"
             />
 
         <RadioButton
             android:id="@+id/ans4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Green"
+            android:text="82"
             android:textSize="16sp"
-            android:onClick="selection"
             />
     </RadioGroup>
 
