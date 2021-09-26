@@ -17,7 +17,7 @@ public class MainActivity2 extends AppCompatActivity {
     TextView score;
     RadioGroup rg;
     RadioButton choice;
-    int total = 0;
+    int total;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,7 @@ public class MainActivity2 extends AppCompatActivity {
         //Updating score with previous total
         score = findViewById(R.id.score);
         score.setText("" + q1Intent.getIntExtra("SCORE", 0));
+        total = Integer.parseInt(score.getText().toString());
 
         //Initializing Widgets
         rg = findViewById(R.id.radioGrp);

@@ -11,7 +11,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity3 extends AppCompatActivity {
+public class MainActivity4 extends AppCompatActivity {
 
     TextView score;
     RadioGroup rg;
@@ -21,14 +21,14 @@ public class MainActivity3 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.activity_main4);
 
         //Pulling intent information from previous activity screen
-        Intent q2Intent = getIntent();
+        Intent q3Intent = getIntent();
 
         //Updating score with previous total
         score = findViewById(R.id.score);
-        score.setText("" + q2Intent.getIntExtra("SCORE", 0));
+        score.setText("" + q3Intent.getIntExtra("SCORE", 0));
         total = Integer.parseInt(score.getText().toString());
 
         //Initializing Widgets
@@ -43,27 +43,27 @@ public class MainActivity3 extends AppCompatActivity {
             choice = findViewById(radioId);
 
             //If the choice matches correct answer
-            if (choice.getText().equals("Hinduism")) {
+            if (choice.getText().equals("Vatican City")) {
                 //Increase score points
                 total += 100;
                 score.setText("" + total);
 
                 //Output correct Toast message
-                Toast msg = Toast.makeText(MainActivity3.this, "CORRECT!\nYou earned $100", Toast.LENGTH_LONG);
+                Toast msg = Toast.makeText(MainActivity4.this, "CORRECT!\nYou earned $100", Toast.LENGTH_LONG);
                 //setGravity used to adjust Toast location
                 msg.setGravity(Gravity.CENTER, 0, 700);
                 msg.show();
 
             } else {
-                Toast msg = Toast.makeText(MainActivity3.this, "Sorry, this is incorrect", Toast.LENGTH_LONG);
+                Toast msg = Toast.makeText(MainActivity4.this, "Sorry, this is incorrect", Toast.LENGTH_LONG);
                 msg.setGravity(Gravity.CENTER, 0, 700);
                 msg.show();
             }
 
             //Add score to intent for next screen
-            Intent n = new Intent(this, MainActivity4.class);
-            n.putExtra("SCORE", total);
-            startActivity(n);
+//            Intent n = new Intent(this, MainActivity5.class);
+//            n.putExtra("SCORE", total);
+//            startActivity(n);
         });
     }
 

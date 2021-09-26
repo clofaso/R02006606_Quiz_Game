@@ -10,11 +10,11 @@
         android:id="@+id/lb1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="110dp"
+        android:layout_marginLeft="100dp"
         android:layout_marginTop="60dp"
         android:text="You Earned: $"
         android:textColor="@color/purple_500"
-        android:textSize="24sp"
+        android:textSize="28sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
@@ -28,7 +28,7 @@
         android:minWidth="48dp"
         android:text="0"
         android:textColor="@color/purple_500"
-        android:textSize="24sp"
+        android:textSize="28sp"
         app:layout_constraintLeft_toRightOf="@+id/lb1"
         app:layout_constraintBaseline_toBaselineOf="@+id/lb1"
         />
@@ -37,7 +37,7 @@
         android:id="@+id/question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="What is the average speed of a cheetah in mph?"
+        android:text="Q2: What is the average speed of a cheetah in mph?"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/lb1"
         android:layout_marginTop="20dp"
@@ -57,7 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="89"
-            android:textSize="16sp"
+            android:textSize="18sp"
             />
 
         <RadioButton
@@ -65,7 +65,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="68"
-            android:textSize="16sp"
+            android:textSize="18sp"
             />
 
         <RadioButton
@@ -73,7 +73,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="77"
-            android:textSize="16sp"
+            android:textSize="18sp"
             />
 
         <RadioButton
@@ -81,7 +81,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="82"
-            android:textSize="16sp"
+            android:textSize="18sp"
             />
     </RadioGroup>
 

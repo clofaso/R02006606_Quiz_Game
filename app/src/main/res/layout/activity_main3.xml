@@ -11,11 +11,11 @@
       android:id="@+id/lb1"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginLeft="110dp"
+      android:layout_marginLeft="100dp"
       android:layout_marginTop="60dp"
       android:text="You Earned: $"
       android:textColor="@color/purple_500"
-      android:textSize="24sp"
+      android:textSize="28sp"
       app:layout_constraintLeft_toLeftOf="parent"
       app:layout_constraintTop_toTopOf="parent"
       />
@@ -29,7 +29,7 @@
       android:minWidth="48dp"
       android:text="0"
       android:textColor="@color/purple_500"
-      android:textSize="24sp"
+      android:textSize="28sp"
       app:layout_constraintLeft_toRightOf="@+id/lb1"
       app:layout_constraintBaseline_toBaselineOf="@+id/lb1"
       />
@@ -38,7 +38,7 @@
       android:id="@+id/question"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="Question 3?"
+      android:text="Q3: What religion is most practiced in India?"
       android:textSize="18sp"
       app:layout_constraintTop_toBottomOf="@id/lb1"
       android:layout_marginTop="20dp"
@@ -57,32 +57,32 @@
         android:id="@+id/ans1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="16sp"
+        android:text="Buddhism"
+        android:textSize="18sp"
         />
 
     <RadioButton
         android:id="@+id/ans2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="16sp"
+        android:text="Hinduism"
+        android:textSize="18sp"
         />
 
     <RadioButton
         android:id="@+id/ans3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="16sp"
+        android:text="Jainism"
+        android:textSize="18sp"
         />
 
     <RadioButton
         android:id="@+id/ans4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="16sp"
+        android:text="Sikhism"
+        android:textSize="18sp"
         />
   </RadioGroup>
 
