@@ -28,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
         //Initializing Widgets
         rg = findViewById(R.id.radioGrp);
         TextView score = findViewById(R.id.score);
-        RadioButton ch1 = findViewById(R.id.ans1);
-        String score_txt = score.getText().toString();
 
         //Add button activity when clicked
         Button btn = findViewById(R.id.btn);
